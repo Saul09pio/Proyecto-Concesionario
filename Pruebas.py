@@ -19,7 +19,8 @@ while True:
     if menu.upper() == "MA":
         print("Poniendo pieza..")
         ca_piece.pop(1)
-        ca_piece.update({1: "MotorA"})
+        print(ca_piece)
+        ca_piece.update({1: components[0][0]})
         for key, value in ca_piece.items():
             print(f"{key}:{value}")
     elif menu.upper() == menu.isdigit():
@@ -33,9 +34,8 @@ while True:
 
 
 
-if menu.upper() == "MA":
-                print("Cambiando pieza vieja...")
-                sleep(4)
-                print("La pieza ha sido cambiada con normalidad")
-                Carro.temp_inventory.insert(0, Carro.components_car.items())
-                Carro.components_car.update(0, Pieces.components[0][0] )
+#if menu.upper() == "MA":
+#              sleep(4)
+#              print("La pieza ha sido cambiada con normalidad")
+#             Carro.temp_inventory.insert(0, Carro.components_car.items())
+#                Carro.components_car.update(0, Pieces.components[0][0] )
